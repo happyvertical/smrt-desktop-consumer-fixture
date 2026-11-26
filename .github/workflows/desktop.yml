@@ -1,0 +1,21 @@
+name: Desktop
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# The called workflow's jobs request these, and GitHub checks them against the
+# caller even though no unsigned run uses them.
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  desktop:
+    uses: happyvertical/smrt/.github/workflows/desktop-consumer-build.yml@d5d9a71e25e780b04b8c8aa7d1b57689428ae9a4
+    with:
+      app_dir: .
+      targets: aarch64-apple-darwin,x86_64-unknown-linux-gnu
+      bridge_path: desktop/smrt-mcp-bridge.mjs
+      smrt_desktop_version: 0.72.0

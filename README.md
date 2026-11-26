@@ -17,3 +17,5 @@ esbuild node_modules/@happyvertical/smrt-app-cli/dist/bin/smrt-mcp-bridge.js \
   --outfile=desktop/smrt-mcp-bridge.mjs \
   --banner:js='import { createRequire as __smrtCreateRequire } from "node:module"; const require = __smrtCreateRequire(import.meta.url);'
 ```
+
+The pull request run builds with `contents` narrowed and no secrets.

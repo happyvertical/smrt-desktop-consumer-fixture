@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   desktop:
-    uses: happyvertical/smrt/.github/workflows/desktop-consumer-build.yml@d5d9a71e25e780b04b8c8aa7d1b57689428ae9a4
+    uses: happyvertical/smrt/.github/workflows/desktop-consumer-build.yml@59143a3f5dd644e249ff134e421f193ed041f321
     with:
       app_dir: .
       targets: aarch64-apple-darwin,x86_64-unknown-linux-gnu
